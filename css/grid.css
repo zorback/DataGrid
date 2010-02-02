@@ -1,0 +1,171 @@
+body {
+    background: beige;
+	font-family: arial;
+    font-size: 8pt;
+}
+
+.grid {
+	width: 800px;
+	height: 500px;
+	outline-color: -moz-use-text-color;
+	outline-style: none;
+	outline-width: 0px;
+	background: white;
+    outline: 0;
+	position:relative;
+}
+
+.grid-canvas {
+	width: 800px;
+	height: 500px;
+	overflow-x: scroll;
+	overflow-y: scroll;
+	background: white;
+}
+
+.grid-virtual {
+	width: 5000px;
+	height: 5000px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.row {
+	width: 100%;
+	height: 28px;
+	overflow:hidden;
+	white-space: nowrap;
+	cursor: default;
+	background: white;
+	position: relative;
+}
+
+.header-row {
+	width: 786px; /* --14 px for firefox */
+	margin-bottom: 20px;
+	font-size: 9pt;
+	overflow: hidden;
+
+}
+
+.header-virtual {
+	width: 5000px;
+	margin-bottom: 20px;
+	margin-left: 68px;
+	font-size: 9pt;
+	overflow: hidden;
+}
+
+.header-row-full {
+	width: 800px;
+	height:48px;
+	overflow: visible;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:5;
+}
+
+.scrolling-top-junction {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	overflow: visible;
+	background-color: #99CCFF;
+	float: left;
+	border: 1px solid #336699;
+	width: 13px;
+	height: 46px;
+	z-index:5;
+}
+
+.inner-header-cell {
+	text-align: center;
+	background-color: #99CCFF;	
+	position: absolute;
+	top: 0;
+	left:0;
+	height: 18px;
+	width:75px;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color:#336699;
+	display: inline-block;
+	padding: 4px;	/* could adjust one more on the left for the border*/
+}
+
+.cell {
+	float: left;
+	height: 20px;
+	width:76px;
+	overflow: visible;
+	position: relative;
+	display: inline-block;
+	padding: 4px;
+	z-index: 1;
+	background-color: white;
+	o-text-overflow: ellipsis;
+}
+
+.inner-cell {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 18px;
+	width:74px;
+	border: 1px solid silver;
+	display: inline-block;
+	padding: 4px;
+	z-index: 1;
+}
+
+.row-cell {
+	text-align: center;
+	width: 18px;
+	height: 16px;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-left: 2px solid gray;
+	border-right: 2px solid gray;
+	margin-right: 38px;
+	padding-top:6px;
+	font-size: 11px;
+	background-color: #99CCFF;	
+}
+
+.selected {	
+	background-color: AliceBlue;
+}
+
+.inner-cell-edit {
+	z-index: 5;
+	width: 110px;
+	height: 24px;
+	overflow: visible;
+	position: absolute;
+	top: -10px;
+	left: -20px;
+	border: 2px solid blue;
+	display: inline-block;
+	padding: 6px;
+	background-color: AliceBlue;
+	font-size: 130%;
+}
+
+.inner-cell-select {
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	height: 18px;
+	width:74px;
+	border: 2px solid blue;
+	display: inline-block;
+	padding: 4px;	
+	font-size: 115%;
+	overflow:visible;
+}
+
+.clear {
+	clear: both;
+}
