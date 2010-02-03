@@ -16,11 +16,13 @@ body {
 }
 
 .grid-canvas {
-	width: 800px;
+	width: 768px;
 	height: 500px;
+	/**margin-left:28px;**/
 	overflow-x: scroll;
 	overflow-y: scroll;
 	background: white;
+	float:left;
 }
 
 .grid-virtual {
@@ -41,19 +43,48 @@ body {
 }
 
 .header-row {
-	width: 786px; /* --14 px for firefox */
+	margin-left: 31px;
+	width: 753px; /* --14 px for firefox scrollbar */
 	margin-bottom: 20px;
 	font-size: 9pt;
 	overflow: hidden;
-
+	border-left: 1px solid #336699;
 }
 
 .header-virtual {
 	width: 5000px;
 	margin-bottom: 20px;
-	margin-left: 68px;
 	font-size: 9pt;
 	overflow: hidden;
+}
+
+.left-column {
+	width: 32px;
+	position: relative;
+	float:left;
+	height: 486px;
+	overflow:hidden;
+	background:white;
+}
+
+.left-column-virtual {
+	width: 32px;
+	position: relative;
+	height: 5000px;
+	overflow:hidden;
+	background:white;
+	border-left: 1px solid;
+	border-color:#336699;
+}
+
+.left-column-full {
+	width: 32px;
+	height: 548px;
+	overflow: visible;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:5;
 }
 
 .header-row-full {
@@ -79,6 +110,20 @@ body {
 	z-index:5;
 }
 
+.scrolling-left-junction {
+	position: absolute;
+	bottom: 0px;
+	left:0px;
+	width: 32px;
+	height: 14px;
+	overflow: visible;
+	z-index:5;
+	
+	border-top: 1px solid;
+	border-color:#336699;
+	
+}
+
 .inner-header-cell {
 	text-align: center;
 	background-color: #99CCFF;	
@@ -92,7 +137,7 @@ body {
 	border-bottom: 1px solid;
 	border-color:#336699;
 	display: inline-block;
-	padding: 4px;	/* could adjust one more on the left for the border*/
+	padding: 4px;	/* could adjust one more pix on the left for the border*/
 }
 
 .cell {
@@ -112,9 +157,11 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 18px;
-	width:74px;
-	border: 1px solid silver;
+	height: 19px;
+	width:75px;
+	border-right: 1px solid;
+	border-bottom: 1px solid; 
+	border-color: silver;
 	display: inline-block;
 	padding: 4px;
 	z-index: 1;
@@ -122,16 +169,19 @@ body {
 
 .row-cell {
 	text-align: center;
-	width: 18px;
-	height: 16px;
-	border-top: 1px solid gray;
-	border-bottom: 1px solid gray;
-	border-left: 2px solid gray;
-	border-right: 2px solid gray;
-	margin-right: 38px;
+	width: 22px;
+	height: 19px;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+	border-color:#336699;
+	/*margin-right: 38px;*/
+	padding-left:4px;
+	padding-right:4px;
 	padding-top:6px;
+	padding-bottom:2px;
 	font-size: 11px;
-	background-color: #99CCFF;	
+	background-color: #99CCFF;
+	overflow:hidden;	
 }
 
 .selected {	
