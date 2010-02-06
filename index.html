@@ -26,11 +26,11 @@
         </div>
 		
 		<script type="text/javascript">
+		var Global = {};
 		$(document).ready(function() {
 			//generate grid
 			var grid = new Grid($('#grid'));
-			grid.init();
-			$Global = {};
+			Global.grid = grid.init(); // save it in a global variable			
  		});
 		                                         
    		</script>  
