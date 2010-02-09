@@ -203,18 +203,29 @@ body {
 }
 
 .inner-cell-edit {
-	z-index: 5;
-	width: 110px;
-	height: 24px;
-	overflow: visible;
 	position: absolute;
-	top: -10px;
-	left: -20px;
-	border: 2px solid blue;
+	top: -2px;
+	left: -2px;
+	width: 150px;
+	height: 30px;
+	position: absolute;
+	border: 2px solid #336699;
+	text-align: left;
 	display: inline-block;
-	padding: 6px;
+	padding: 4px;
 	background-color: AliceBlue;
-	font-size: 130%;
+	font-size: 120%;
+	overflow: visible;
+	z-index: 5;
+}
+
+.input-area {
+	background: transparent;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
 .inner-cell-select {
@@ -226,7 +237,7 @@ body {
 	border: 2px solid #336699;
 	display: inline-block;
 	padding: 4px;	
-	font-size: 115%;
+	font-size: 120%;
 	overflow:visible;
 	z-index: 5;
 }
